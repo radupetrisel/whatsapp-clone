@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		7CABE8B02BD18D3000A63F3B /* whatsapp_cloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CABE8AF2BD18D3000A63F3B /* whatsapp_cloneApp.swift */; };
-		7CABE8B22BD18D3000A63F3B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CABE8B12BD18D3000A63F3B /* ContentView.swift */; };
 		7CABE8B42BD18D3200A63F3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CABE8B32BD18D3200A63F3B /* Assets.xcassets */; };
 		7CABE8B72BD18D3200A63F3B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CABE8B62BD18D3200A63F3B /* Preview Assets.xcassets */; };
+		7CABE8CD2BD1911100A63F3B /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CABE8CC2BD1911100A63F3B /* MainTabView.swift */; };
+		7CABE8CF2BD192DE00A63F3B /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CABE8CE2BD192DE00A63F3B /* TabItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7CABE8AC2BD18D3000A63F3B /* whatsapp-clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "whatsapp-clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CABE8AF2BD18D3000A63F3B /* whatsapp_cloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whatsapp_cloneApp.swift; sourceTree = "<group>"; };
-		7CABE8B12BD18D3000A63F3B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7CABE8B32BD18D3200A63F3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7CABE8B62BD18D3200A63F3B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7CABE8CC2BD1911100A63F3B /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		7CABE8CE2BD192DE00A63F3B /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				7CABE8AF2BD18D3000A63F3B /* whatsapp_cloneApp.swift */,
-				7CABE8B12BD18D3000A63F3B /* ContentView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -120,6 +121,8 @@
 		7CABE8C22BD18E8300A63F3B /* Tab bar */ = {
 			isa = PBXGroup;
 			children = (
+				7CABE8CC2BD1911100A63F3B /* MainTabView.swift */,
+				7CABE8CE2BD192DE00A63F3B /* TabItem.swift */,
 			);
 			path = "Tab bar";
 			sourceTree = "<group>";
@@ -257,8 +260,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CABE8B22BD18D3000A63F3B /* ContentView.swift in Sources */,
 				7CABE8B02BD18D3000A63F3B /* whatsapp_cloneApp.swift in Sources */,
+				7CABE8CF2BD192DE00A63F3B /* TabItem.swift in Sources */,
+				7CABE8CD2BD1911100A63F3B /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,7 +396,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"whatsapp-clone/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ATK7X87JFN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -421,7 +425,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"whatsapp-clone/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = ATK7X87JFN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
