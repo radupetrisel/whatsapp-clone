@@ -51,8 +51,11 @@
 		7CABE8AE2BD18D3000A63F3B /* whatsapp-clone */ = {
 			isa = PBXGroup;
 			children = (
-				7CABE8AF2BD18D3000A63F3B /* whatsapp_cloneApp.swift */,
-				7CABE8B12BD18D3000A63F3B /* ContentView.swift */,
+				7CABE8C12BD18E4E00A63F3B /* App */,
+				7CABE8C02BD18E4C00A63F3B /* Core */,
+				7CABE8BF2BD18E4900A63F3B /* Model */,
+				7CABE8BE2BD18E4600A63F3B /* Service */,
+				7CABE8BD2BD18E4300A63F3B /* Utils */,
 				7CABE8B32BD18D3200A63F3B /* Assets.xcassets */,
 				7CABE8B52BD18D3200A63F3B /* Preview Content */,
 			);
@@ -65,6 +68,123 @@
 				7CABE8B62BD18D3200A63F3B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7CABE8BD2BD18E4300A63F3B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7CABE8CB2BD18F2200A63F3B /* Plist */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		7CABE8BE2BD18E4600A63F3B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		7CABE8BF2BD18E4900A63F3B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7CABE8C02BD18E4C00A63F3B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				7CABE8CA2BD18E9800A63F3B /* Authentication */,
+				7CABE8C92BD18E9400A63F3B /* Components */,
+				7CABE8C82BD18E9200A63F3B /* Chat */,
+				7CABE8C72BD18E8F00A63F3B /* Inbox */,
+				7CABE8C62BD18E8D00A63F3B /* New Message */,
+				7CABE8C52BD18E8B00A63F3B /* Profile */,
+				7CABE8C42BD18E8800A63F3B /* Root */,
+				7CABE8C32BD18E8500A63F3B /* Settings */,
+				7CABE8C22BD18E8300A63F3B /* Tab bar */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		7CABE8C12BD18E4E00A63F3B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7CABE8AF2BD18D3000A63F3B /* whatsapp_cloneApp.swift */,
+				7CABE8B12BD18D3000A63F3B /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		7CABE8C22BD18E8300A63F3B /* Tab bar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Tab bar";
+			sourceTree = "<group>";
+		};
+		7CABE8C32BD18E8500A63F3B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		7CABE8C42BD18E8800A63F3B /* Root */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		7CABE8C52BD18E8B00A63F3B /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		7CABE8C62BD18E8D00A63F3B /* New Message */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Message";
+			sourceTree = "<group>";
+		};
+		7CABE8C72BD18E8F00A63F3B /* Inbox */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Inbox;
+			sourceTree = "<group>";
+		};
+		7CABE8C82BD18E9200A63F3B /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		7CABE8C92BD18E9400A63F3B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		7CABE8CA2BD18E9800A63F3B /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		7CABE8CB2BD18F2200A63F3B /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Plist;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +392,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"whatsapp-clone/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -300,6 +421,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"whatsapp-clone/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
