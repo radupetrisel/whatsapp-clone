@@ -12,7 +12,7 @@ struct MainTabView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            TabItem(title: "Inbox", imageName: "bubble", tag: 0, selectedTab: $selectedTab) { Text("Inbox") }
+            TabItem(title: "Inbox", imageName: "bubble", tag: 0, selectedTab: $selectedTab) { InboxView() }
             
             TabItem(title: "Updates", imageName: "dial.low", tag: 1, selectedTab: $selectedTab) { Text("Updates") }
             
