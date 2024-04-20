@@ -9,11 +9,11 @@ import SwiftUI
 
 struct ChatHeaderView: View {
     var body: some View {
-        HStack(alignment: .top, spacing: 15) {
+        HStack(alignment: .top, spacing: 12) {
             Image(.elizabeth)
                 .resizable()
                 .scaledToFill()
-                .frame(width: 75, height: 75)
+                .frame(width: 56, height: 56)
                 .clipShape(.circle)
             
             VStack(alignment: .leading) {
@@ -21,7 +21,9 @@ struct ChatHeaderView: View {
                     .bold()
                 
                 Text("Hello")
+                    .lineLimit(2)
                     .foregroundStyle(.secondary)
+                    .frame(maxWidth: .infinity, alignment: .leading)
                 
                 Spacer()
             }
@@ -33,9 +35,9 @@ struct ChatHeaderView: View {
                     Text("Yesterday")
                     
                     Image(systemName: "chevron.right")
-                        .font(.callout)
                         .bold()
                 }
+                .font(.footnote)
                 .foregroundStyle(.tertiary)
                 
                 Spacer()
