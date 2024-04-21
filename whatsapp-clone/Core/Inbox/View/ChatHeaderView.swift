@@ -10,7 +10,7 @@ import SwiftUI
 struct ChatHeaderView: View {
     var body: some View {
         HStack(alignment: .top, spacing: 12) {
-            CircularProfileImageView(size: .medium, user: .preview)
+            CircularProfileImageView(.elizabeth, size: .medium)
             
             VStack(alignment: .leading) {
                 Text("Elizabeth Olsen")
