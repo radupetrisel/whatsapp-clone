@@ -7,45 +7,39 @@
 
 import SwiftUI
 
-struct CircularProfileImageView: View {
-    let size: ProfileImageSize
-    let imageURL: URL?
-    let imageResource: ImageResource?
-    
-    init(_ imageURL: URL, size: ProfileImageSize) {
-        self.imageURL = imageURL
-        self.size = size
-        self.imageResource = nil
-    }
-    
-    init(_ imageResource: ImageResource, size: ProfileImageSize) {
-        self.imageResource = imageResource
-        self.size = size
-        self.imageURL = nil
-    }
-    
-    var body: some View {
-        if let imageURL {
-            AsyncImage(url: imageURL) { image in
-                image.resizable()
-            } placeholder: {
-                Image(systemName: "person.circle")
-                    .resizable()
-                    .symbolVariant(.fill)
-            }
-            .scaledToFill()
+extension View {
+    func circularProfile(_ size: ProfileImageSize) -> some View {
+        scaledToFill()
             .frame(width: size.dimension, height: size.dimension)
             .clipShape(.circle)
-        } else if let imageResource {
-            Image(imageResource)
-                .resizable()
-                .scaledToFill()
-                .frame(width: size.dimension, height: size.dimension)
-                .clipShape(.circle)
-        }
     }
 }
 
-#Preview {
-    CircularProfileImageView(.elizabeth, size: .medium)
+enum ProfileImageSize {
+    case extraExtraSmall
+    case extraSmall
+    case small
+    case medium
+    case large
+    case extraLarge
+    case extraExtraLarge
+    
+    var dimension: CGFloat {
+        switch self {
+        case .extraExtraSmall:
+            return 28
+        case .extraSmall:
+            return 32
+        case .small:
+            return 40
+        case .medium:
+            return 56
+        case .large:
+            return 64
+        case .extraLarge:
+            return 80
+        case .extraExtraLarge:
+            return 120
+        }
+    }
 }

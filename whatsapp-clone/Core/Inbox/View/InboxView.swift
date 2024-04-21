@@ -21,10 +21,15 @@ struct InboxView: View {
                 .listStyle(.plain)
                 .searchable(text: $searchString)
                 
-                Button("Start new chat", systemImage: "plus.bubble.fill") {
-                    
+                NavigationLink {
+                    NewMessageView()
+                } label: {
+                    Image(systemName: "plus.bubble.fill")
                 }
-                .buttonStyle(.newMessage)
+                .foregroundStyle(.white)
+                .padding()
+                .background(.secondary)
+                .clipShape(.rect(cornerRadius: 10))
                 .padding()
             }
             .toolbar { toolbar }
