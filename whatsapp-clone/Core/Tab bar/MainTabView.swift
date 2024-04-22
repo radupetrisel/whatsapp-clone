@@ -20,7 +20,6 @@ struct MainTabView: View {
             
             TabItem(title: "Calls", imageName: "phone", tag: 3, selectedTab: $selectedTab) { Text("Calls") }
         }
-        .tint(.black)
     }
 }
 

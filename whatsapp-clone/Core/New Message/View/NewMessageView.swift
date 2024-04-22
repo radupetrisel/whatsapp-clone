@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct NewMessageView: View {
-    @Environment(\.dismiss) var dismiss
-    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
@@ -57,8 +55,7 @@ struct NewMessageView: View {
     @ToolbarContentBuilder
     private var toolbar: some ToolbarContent {
         ToolbarItemGroup(placement: .topBarLeading) {
-            Button("Back", systemImage: "arrow.backward") { dismiss() }
-                .tint(.black)
+            CustomBackButton()
             
             VStack(alignment: .leading) {
                 Text("Select contact")

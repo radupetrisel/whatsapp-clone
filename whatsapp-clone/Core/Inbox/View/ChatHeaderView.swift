@@ -9,36 +9,40 @@ import SwiftUI
 
 struct ChatHeaderView: View {
     var body: some View {
-        HStack(alignment: .top, spacing: 12) {
-            Image(.elizabeth)
-                .resizable()
-                .circularProfile(.medium)
-            
-            VStack(alignment: .leading) {
-                Text("Elizabeth Olsen")
-                    .bold()
+        NavigationLink {
+            ChatView()
+        } label: {
+            HStack(alignment: .top, spacing: 12) {
+                Image(.elizabeth)
+                    .resizable()
+                    .circularProfile(.medium)
                 
-                Text("Hello")
-                    .lineLimit(2)
-                    .foregroundStyle(.secondary)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                
-                Spacer()
-            }
-            
-            Spacer(minLength: 0)
-            
-            VStack(alignment: .leading) {
-                HStack {
-                    Text("Yesterday")
-                    
-                    Image(systemName: "chevron.right")
+                VStack(alignment: .leading) {
+                    Text("Elizabeth Olsen")
                         .bold()
+                    
+                    Text("Hello")
+                        .lineLimit(2)
+                        .foregroundStyle(.secondary)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    Spacer()
                 }
-                .font(.footnote)
-                .foregroundStyle(.tertiary)
                 
-                Spacer()
+                Spacer(minLength: 0)
+                
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text("Yesterday")
+                        
+                        Image(systemName: "chevron.right")
+                            .bold()
+                    }
+                    .font(.footnote)
+                    .foregroundStyle(.tertiary)
+                    
+                    Spacer()
+                }
             }
         }
     }
