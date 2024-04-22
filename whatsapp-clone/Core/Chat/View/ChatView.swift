@@ -12,8 +12,25 @@ struct ChatView: View {
     
     var body: some View {
         ScrollView {
-            
+            VStack {
+                ForEach(0 ..< 1) { _ in
+                    Section {
+                        ForEach(0 ..< 3) { _ in
+                            ChatMessageCell()
+                        }
+                    } header: {
+                        Capsule()
+                            .fill(.windowBackground)
+                            .frame(width: 120, height: 44)
+                            .overlay {
+                                Text("04.05.2024")
+                            }
+                            .padding(.top, 10)
+                    }
+                }
+            }
         }
+        .frame(maxWidth: .infinity)
         .background(backgroundImage)
         .safeAreaInset(edge: .bottom) { messageArea }
         .navigationBarTitleDisplayMode(.inline)
