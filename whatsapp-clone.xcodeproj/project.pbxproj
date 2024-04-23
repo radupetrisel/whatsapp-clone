@@ -21,6 +21,9 @@
 		7CABE8EA2BD6484800A63F3B /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CABE8E92BD6484800A63F3B /* CustomBackButton.swift */; };
 		7CABE8EC2BD6DEAA00A63F3B /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CABE8EB2BD6DEAA00A63F3B /* ChatMessageCell.swift */; };
 		7CABE8EE2BD6DFEF00A63F3B /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CABE8ED2BD6DFEF00A63F3B /* ChatBubble.swift */; };
+		7CABE8F12BD8221400A63F3B /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CABE8F02BD8221400A63F3B /* Date+Extensions.swift */; };
+		7CABE8F32BD823AC00A63F3B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CABE8F22BD823AC00A63F3B /* Message.swift */; };
+		7CABE8F52BD8245E00A63F3B /* MessageGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CABE8F42BD8245E00A63F3B /* MessageGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,9 @@
 		7CABE8E92BD6484800A63F3B /* CustomBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackButton.swift; sourceTree = "<group>"; };
 		7CABE8EB2BD6DEAA00A63F3B /* ChatMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 		7CABE8ED2BD6DFEF00A63F3B /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
+		7CABE8F02BD8221400A63F3B /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		7CABE8F22BD823AC00A63F3B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		7CABE8F42BD8245E00A63F3B /* MessageGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,7 @@
 		7CABE8BD2BD18E4300A63F3B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				7CABE8EF2BD821DE00A63F3B /* Extensions */,
 				7CABE8CB2BD18F2200A63F3B /* Plist */,
 			);
 			path = Utils;
@@ -109,6 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				7CABE8DE2BD57A4800A63F3B /* User.swift */,
+				7CABE8F22BD823AC00A63F3B /* Message.swift */,
+				7CABE8F42BD8245E00A63F3B /* MessageGroup.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -257,6 +266,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		7CABE8EF2BD821DE00A63F3B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7CABE8F02BD8221400A63F3B /* Date+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -330,15 +347,18 @@
 				7CABE8DB2BD5791200A63F3B /* CircularProfileImageView.swift in Sources */,
 				7CABE8EA2BD6484800A63F3B /* CustomBackButton.swift in Sources */,
 				7CABE8D42BD2B32000A63F3B /* ChatHeaderView.swift in Sources */,
+				7CABE8F12BD8221400A63F3B /* Date+Extensions.swift in Sources */,
 				7CABE8D12BD2AE2500A63F3B /* InboxView.swift in Sources */,
 				7CABE8DF2BD57A4800A63F3B /* User.swift in Sources */,
 				7CABE8EC2BD6DEAA00A63F3B /* ChatMessageCell.swift in Sources */,
 				7CABE8E82BD645A700A63F3B /* ChatView.swift in Sources */,
 				7CABE8EE2BD6DFEF00A63F3B /* ChatBubble.swift in Sources */,
 				7CABE8B02BD18D3000A63F3B /* whatsapp_cloneApp.swift in Sources */,
+				7CABE8F52BD8245E00A63F3B /* MessageGroup.swift in Sources */,
 				7CABE8CF2BD192DE00A63F3B /* TabItem.swift in Sources */,
 				7CABE8CD2BD1911100A63F3B /* MainTabView.swift in Sources */,
 				7CABE8E42BD5808400A63F3B /* NewMessageView.swift in Sources */,
+				7CABE8F32BD823AC00A63F3B /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

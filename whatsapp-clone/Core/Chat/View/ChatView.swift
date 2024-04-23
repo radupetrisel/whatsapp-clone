@@ -13,17 +13,17 @@ struct ChatView: View {
     var body: some View {
         ScrollView {
             VStack {
-                ForEach(0 ..< 1) { _ in
+                ForEach([MessageGroup.preview]) { group in
                     Section {
-                        ForEach(0 ..< 3) { _ in
-                            ChatMessageCell()
+                        ForEach(group.messages) { message in
+                            ChatMessageCell(message: message)
                         }
                     } header: {
                         Capsule()
                             .fill(.windowBackground)
                             .frame(width: 120, height: 44)
                             .overlay {
-                                Text("04.05.2024")
+                                Text(group.date.chatHeader)
                             }
                             .padding(.top, 10)
                     }

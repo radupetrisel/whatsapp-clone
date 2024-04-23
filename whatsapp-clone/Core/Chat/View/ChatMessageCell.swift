@@ -8,22 +8,47 @@
 import SwiftUI
 
 struct ChatMessageCell: View {
+    let message: Message
+    
+    var isFromCurrentUser: Bool { message.isFromCurrentUser }
+    
+    var alignment: Alignment {
+        isFromCurrentUser ? .trailing : .leading
+    }
+    
+    var background: some ShapeStyle {
+        isFromCurrentUser ? .peach : Color(white: 0.75)
+    }
+    
     var body: some View {
-        HStack {
-            Text("Hello")
+        HStack(alignment: .bottom) {
+            if !isFromCurrentUser {
+                Image(.elizabeth)
+                    .resizable()
+                    .circularProfile(.extraExtraSmall)
+            }
             
-            Text("18:44")
-                .foregroundStyle(.secondary)
-                .font(.caption)
+            HStack {
+               
+                Text(message.content)
+                
+                Text("18:44")
+                    .foregroundStyle(.secondary)
+                    .font(.caption)
+            }
+            .padding(12)
+            .background(background)
+            .clipShape(.chatBubble(isFromCurrentUser: isFromCurrentUser))
         }
-        .padding(12)
-        .background(.peach)
-        .clipShape(.chatBubble)
-        .frame(maxWidth: .infinity, alignment: .trailing)
+        .frame(maxWidth: .infinity, alignment: alignment)
         .padding(.horizontal)
     }
 }
 
-#Preview {
-    ChatMessageCell()
+#Preview("Current user") {
+    ChatMessageCell(message: .preview)
+}
+
+#Preview("Other user") {
+    ChatMessageCell(message: .preview)
 }
