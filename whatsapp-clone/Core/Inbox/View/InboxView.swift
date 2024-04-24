@@ -46,10 +46,12 @@ struct InboxView: View {
             .tint(.black)
         }
         ToolbarItem(placement: .topBarTrailing) {
-            Button("More", systemImage: "ellipsis") {
-                
+            NavigationLink {
+                ProfileView()
+            } label: {
+                Image(systemName: "ellipsis")
+                    .tint(.black)
             }
-            .tint(.black)
         }
     }
 }
