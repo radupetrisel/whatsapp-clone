@@ -30,6 +30,7 @@
 		7CABE9002BDA6D8900A63F3B /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CABE8FF2BDA6D8900A63F3B /* Setting.swift */; };
 		7CABE9022BDA6DB200A63F3B /* SettingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CABE9012BDA6DB200A63F3B /* SettingRow.swift */; };
 		7CABE9042BDA6E2300A63F3B /* SettingsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CABE9032BDA6E2300A63F3B /* SettingsHeader.swift */; };
+		7CABE9072BDA924000A63F3B /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CABE9062BDA924000A63F3B /* WelcomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		7CABE8FF2BDA6D8900A63F3B /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		7CABE9012BDA6DB200A63F3B /* SettingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRow.swift; sourceTree = "<group>"; };
 		7CABE9032BDA6E2300A63F3B /* SettingsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeader.swift; sourceTree = "<group>"; };
+		7CABE9062BDA924000A63F3B /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 		7CABE8CA2BD18E9800A63F3B /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				7CABE9052BDA923700A63F3B /* View */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -316,6 +319,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		7CABE9052BDA923700A63F3B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7CABE9062BDA924000A63F3B /* WelcomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -403,6 +414,7 @@
 				7CABE8B02BD18D3000A63F3B /* whatsapp_cloneApp.swift in Sources */,
 				7CABE8F52BD8245E00A63F3B /* MessageGroup.swift in Sources */,
 				7CABE8CF2BD192DE00A63F3B /* TabItem.swift in Sources */,
+				7CABE9072BDA924000A63F3B /* WelcomeView.swift in Sources */,
 				7CABE8CD2BD1911100A63F3B /* MainTabView.swift in Sources */,
 				7CABE9002BDA6D8900A63F3B /* Setting.swift in Sources */,
 				7CABE8E42BD5808400A63F3B /* NewMessageView.swift in Sources */,
