@@ -19,6 +19,8 @@ struct MainTabView: View {
             TabItem(title: "Communities", imageName: "person.3", tag: 2, selectedTab: $selectedTab) { Text("Communities") }
             
             TabItem(title: "Calls", imageName: "phone", tag: 3, selectedTab: $selectedTab) { Text("Calls") }
+            
+            TabItem(title: "Settings", imageName: "gear", tag: 4, selectedTab: $selectedTab) { SettingsView() }
         }
     }
 }

@@ -14,6 +14,7 @@ struct CustomBackButton: View {
         Button("Back", systemImage: "arrow.backward") { dismiss() }
             .labelStyle(.iconOnly)
             .tint(.black)
+            .navigationBarBackButtonHidden()
     }
 }
 

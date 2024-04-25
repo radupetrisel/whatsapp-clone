@@ -49,7 +49,6 @@ struct NewMessageView: View {
             .padding(.top)
         }
         .toolbar { toolbar }
-        .navigationBarBackButtonHidden()
     }
     
     @ToolbarContentBuilder
