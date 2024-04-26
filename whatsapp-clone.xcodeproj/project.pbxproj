@@ -12,6 +12,9 @@
 		7C56881C2BDBC47100ADA6A9 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C56881B2BDBC47100ADA6A9 /* CustomTextField.swift */; };
 		7C56881F2BDBF5F500ADA6A9 /* FullWidthButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C56881E2BDBF5F500ADA6A9 /* FullWidthButtonStyle.swift */; };
 		7C5688212BDBF61700ADA6A9 /* AnyButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5688202BDBF61700ADA6A9 /* AnyButtonStyle.swift */; };
+		7C5688232BDBF68000ADA6A9 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5688222BDBF68000ADA6A9 /* RegistrationView.swift */; };
+		7C5688252BDBF6CB00ADA6A9 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5688242BDBF6CB00ADA6A9 /* RegistrationViewModel.swift */; };
+		7C5688272BDBF8A200ADA6A9 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5688262BDBF8A200ADA6A9 /* LogoView.swift */; };
 		7CABE8B02BD18D3000A63F3B /* whatsapp_cloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CABE8AF2BD18D3000A63F3B /* whatsapp_cloneApp.swift */; };
 		7CABE8B42BD18D3200A63F3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CABE8B32BD18D3200A63F3B /* Assets.xcassets */; };
 		7CABE8B72BD18D3200A63F3B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CABE8B62BD18D3200A63F3B /* Preview Assets.xcassets */; };
@@ -44,6 +47,9 @@
 		7C56881B2BDBC47100ADA6A9 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		7C56881E2BDBF5F500ADA6A9 /* FullWidthButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullWidthButtonStyle.swift; sourceTree = "<group>"; };
 		7C5688202BDBF61700ADA6A9 /* AnyButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyButtonStyle.swift; sourceTree = "<group>"; };
+		7C5688222BDBF68000ADA6A9 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		7C5688242BDBF6CB00ADA6A9 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		7C5688262BDBF8A200ADA6A9 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		7CABE8AC2BD18D3000A63F3B /* whatsapp-clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "whatsapp-clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CABE8AF2BD18D3000A63F3B /* whatsapp_cloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whatsapp_cloneApp.swift; sourceTree = "<group>"; };
 		7CABE8B32BD18D3200A63F3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				7C5688192BDB8F5000ADA6A9 /* LoginViewModel.swift */,
+				7C5688242BDBF6CB00ADA6A9 /* RegistrationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -285,6 +292,7 @@
 				7CABE8DA2BD5791200A63F3B /* CircularProfileImageView.swift */,
 				7CABE8E92BD6484800A63F3B /* CustomBackButton.swift */,
 				7C56881B2BDBC47100ADA6A9 /* CustomTextField.swift */,
+				7C5688262BDBF8A200ADA6A9 /* LogoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -354,6 +362,7 @@
 			children = (
 				7CABE9062BDA924000A63F3B /* WelcomeView.swift */,
 				7C5688162BDB8EDF00ADA6A9 /* LoginView.swift */,
+				7C5688222BDBF68000ADA6A9 /* RegistrationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -431,6 +440,8 @@
 				7CABE8DB2BD5791200A63F3B /* CircularProfileImageView.swift in Sources */,
 				7CABE9022BDA6DB200A63F3B /* SettingRow.swift in Sources */,
 				7CABE8EA2BD6484800A63F3B /* CustomBackButton.swift in Sources */,
+				7C5688252BDBF6CB00ADA6A9 /* RegistrationViewModel.swift in Sources */,
+				7C5688232BDBF68000ADA6A9 /* RegistrationView.swift in Sources */,
 				7CABE8D42BD2B32000A63F3B /* ChatHeaderView.swift in Sources */,
 				7C5688172BDB8EDF00ADA6A9 /* LoginView.swift in Sources */,
 				7CABE8FD2BDA369F00A63F3B /* SettingsView.swift in Sources */,
@@ -451,6 +462,7 @@
 				7CABE8CD2BD1911100A63F3B /* MainTabView.swift in Sources */,
 				7C56881F2BDBF5F500ADA6A9 /* FullWidthButtonStyle.swift in Sources */,
 				7C5688212BDBF61700ADA6A9 /* AnyButtonStyle.swift in Sources */,
+				7C5688272BDBF8A200ADA6A9 /* LogoView.swift in Sources */,
 				7C56881A2BDB8F5000ADA6A9 /* LoginViewModel.swift in Sources */,
 				7CABE9002BDA6D8900A63F3B /* Setting.swift in Sources */,
 				7CABE8E42BD5808400A63F3B /* NewMessageView.swift in Sources */,

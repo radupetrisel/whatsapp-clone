@@ -11,7 +11,7 @@ import SwiftUI
 struct whatsapp_cloneApp: App {
     var body: some Scene {
         WindowGroup {
-            MainTabView()
+            LoginView()
         }
     }
 }
