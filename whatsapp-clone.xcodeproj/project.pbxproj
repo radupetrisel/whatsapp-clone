@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C5688172BDB8EDF00ADA6A9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5688162BDB8EDF00ADA6A9 /* LoginView.swift */; };
+		7C56881A2BDB8F5000ADA6A9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5688192BDB8F5000ADA6A9 /* LoginViewModel.swift */; };
+		7C56881C2BDBC47100ADA6A9 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C56881B2BDBC47100ADA6A9 /* CustomTextField.swift */; };
 		7CABE8B02BD18D3000A63F3B /* whatsapp_cloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CABE8AF2BD18D3000A63F3B /* whatsapp_cloneApp.swift */; };
 		7CABE8B42BD18D3200A63F3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CABE8B32BD18D3200A63F3B /* Assets.xcassets */; };
 		7CABE8B72BD18D3200A63F3B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CABE8B62BD18D3200A63F3B /* Preview Assets.xcassets */; };
@@ -34,6 +37,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C5688162BDB8EDF00ADA6A9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		7C5688192BDB8F5000ADA6A9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		7C56881B2BDBC47100ADA6A9 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		7CABE8AC2BD18D3000A63F3B /* whatsapp-clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "whatsapp-clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CABE8AF2BD18D3000A63F3B /* whatsapp_cloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whatsapp_cloneApp.swift; sourceTree = "<group>"; };
 		7CABE8B32BD18D3200A63F3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -72,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C5688182BDB8F4900ADA6A9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7C5688192BDB8F5000ADA6A9 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		7CABE8A32BD18D3000A63F3B = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +243,7 @@
 		7CABE8CA2BD18E9800A63F3B /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				7C5688182BDB8F4900ADA6A9 /* ViewModel */,
 				7CABE9052BDA923700A63F3B /* View */,
 			);
 			path = Authentication;
@@ -255,6 +270,7 @@
 			children = (
 				7CABE8DA2BD5791200A63F3B /* CircularProfileImageView.swift */,
 				7CABE8E92BD6484800A63F3B /* CustomBackButton.swift */,
+				7C56881B2BDBC47100ADA6A9 /* CustomTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -323,6 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				7CABE9062BDA924000A63F3B /* WelcomeView.swift */,
+				7C5688162BDB8EDF00ADA6A9 /* LoginView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -401,10 +418,12 @@
 				7CABE9022BDA6DB200A63F3B /* SettingRow.swift in Sources */,
 				7CABE8EA2BD6484800A63F3B /* CustomBackButton.swift in Sources */,
 				7CABE8D42BD2B32000A63F3B /* ChatHeaderView.swift in Sources */,
+				7C5688172BDB8EDF00ADA6A9 /* LoginView.swift in Sources */,
 				7CABE8FD2BDA369F00A63F3B /* SettingsView.swift in Sources */,
 				7CABE8F12BD8221400A63F3B /* Date+Extensions.swift in Sources */,
 				7CABE8D12BD2AE2500A63F3B /* InboxView.swift in Sources */,
 				7CABE8DF2BD57A4800A63F3B /* User.swift in Sources */,
+				7C56881C2BDBC47100ADA6A9 /* CustomTextField.swift in Sources */,
 				7CABE8EC2BD6DEAA00A63F3B /* ChatMessageCell.swift in Sources */,
 				7CABE8FA2BD8F60000A63F3B /* ProfileViewRow.swift in Sources */,
 				7CABE8E82BD645A700A63F3B /* ChatView.swift in Sources */,
@@ -416,6 +435,7 @@
 				7CABE8CF2BD192DE00A63F3B /* TabItem.swift in Sources */,
 				7CABE9072BDA924000A63F3B /* WelcomeView.swift in Sources */,
 				7CABE8CD2BD1911100A63F3B /* MainTabView.swift in Sources */,
+				7C56881A2BDB8F5000ADA6A9 /* LoginViewModel.swift in Sources */,
 				7CABE9002BDA6D8900A63F3B /* Setting.swift in Sources */,
 				7CABE8E42BD5808400A63F3B /* NewMessageView.swift in Sources */,
 				7CABE8F32BD823AC00A63F3B /* Message.swift in Sources */,
