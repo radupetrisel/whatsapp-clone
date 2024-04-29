@@ -10,6 +10,8 @@ import SwiftUI
 struct LoginView: View {
     @State private var viewModel = LoginViewModel()
     
+    @State private var hasLoginError = false
+    
     var body: some View {
         NavigationStack {
             VStack(spacing: 36) {
@@ -28,7 +30,13 @@ struct LoginView: View {
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 
                 Button("Login") {
-                    
+                    Task {
+                        do {
+                            try await viewModel.login()
+                        } catch {
+                            hasLoginError = true
+                        }
+                    }
                 }
                 .buttonStyle(.fullWidth(background: .green, foreground: .white))
                 .buttonBorderShape(.roundedRectangle)
@@ -45,6 +53,9 @@ struct LoginView: View {
                 .font(.footnote)
             }
             .padding()
+            .alert("Could not log in", isPresented: $hasLoginError) {
+                Button("Ok") { }
+            }
         }
     }
 }

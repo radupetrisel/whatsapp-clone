@@ -56,7 +56,7 @@ struct RegistrationView: View {
             .font(.footnote)
         }
         .alert("Could not sign up", isPresented: $hasSignUpError) {
-            Text("Ok")
+            Button("Ok") { }
         }
         .padding()
         .toolbar { toolbar }

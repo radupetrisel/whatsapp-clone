@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @State private var viewModel = SettingsViewModel()
+    
     @State private var searchString = ""
     
     var body: some View {
@@ -18,7 +20,7 @@ struct SettingsView: View {
                 Divider()
                 
                 VStack {
-                    ForEach(Setting.allCases, content: SettingRow.init(setting:))
+                    ForEach(viewModel.settings, content: SettingRow.init(setting:))
                 }
             }
             .searchable(text: $searchString)

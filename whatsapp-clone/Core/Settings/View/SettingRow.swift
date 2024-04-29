@@ -8,31 +8,36 @@
 import SwiftUI
 
 struct SettingRow: View {
-    let setting: Setting
+    let setting: SettingViewModel
     
     var body: some View {
-        HStack(spacing: 20) {
-            Image(systemName: setting.imageName)
-                .font(.headline)
-                .foregroundStyle(.secondary)
-            
-            VStack(alignment: .leading) {
-                Text(setting.title)
+        Button {
+            setting.action()
+        } label: {
+            HStack(spacing: 20) {
+                Image(systemName: setting.imageName)
                     .font(.headline)
-                    .fontWeight(.semibold)
+                    .foregroundStyle(.secondary)
                 
-                if let description = setting.description {
-                    Text(description)
-                        .font(.footnote)
-                        .foregroundStyle(.secondary)
+                VStack(alignment: .leading) {
+                    Text(setting.title)
+                        .font(.headline)
+                        .fontWeight(.semibold)
+                    
+                    if let description = setting.description {
+                        Text(description)
+                            .font(.footnote)
+                            .foregroundStyle(.secondary)
+                    }
                 }
             }
+            .padding()
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .padding()
-        .frame(maxWidth: .infinity, alignment: .leading)
+        .buttonStyle(.plain)
     }
 }
 
 #Preview {
-    SettingRow(setting: .account)
+    SettingRow(setting: .preview)
 }

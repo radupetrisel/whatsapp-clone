@@ -15,6 +15,7 @@ final class RegistrationViewModel {
     var password: String = ""
     
     func createUser() async throws {
-        try await AuthService.shared.createUser(email: email.trimmingCharacters(in: .whitespacesAndNewlines), password: password, fullName: fullName, phoneNumber: phoneNumber)
+        try await AuthService.shared.createUser(email: email.trimmingCharacters(in: .whitespacesAndNewlines), password: password)
+        try await UserService.shared.upload(fullName: fullName, email: email, phoneNumber: phoneNumber)
     }
 }
