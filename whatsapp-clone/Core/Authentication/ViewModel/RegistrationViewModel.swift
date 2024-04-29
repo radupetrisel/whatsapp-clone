@@ -13,4 +13,8 @@ final class RegistrationViewModel {
     var fullName: String = ""
     var phoneNumber: String = ""
     var password: String = ""
+    
+    func createUser() async throws {
+        try await AuthService.shared.createUser(email: email.trimmingCharacters(in: .whitespacesAndNewlines), password: password, fullName: fullName, phoneNumber: phoneNumber)
+    }
 }

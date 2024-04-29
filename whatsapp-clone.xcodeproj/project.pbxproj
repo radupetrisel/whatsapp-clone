@@ -21,6 +21,8 @@
 		7C5688862BDF841E00ADA6A9 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 7C5688852BDF841E00ADA6A9 /* FirebaseStorage */; };
 		7C5688882BDF895200ADA6A9 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7C5688872BDF895200ADA6A9 /* .gitignore */; };
 		7C56888A2BDF897600ADA6A9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C5688892BDF897600ADA6A9 /* GoogleService-Info.plist */; };
+		7C56888C2BDF8A4D00ADA6A9 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C56888B2BDF8A4D00ADA6A9 /* AuthService.swift */; };
+		7C56888E2BDF8DAD00ADA6A9 /* Firestore+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C56888D2BDF8DAD00ADA6A9 /* Firestore+Extensions.swift */; };
 		7CABE8B02BD18D3000A63F3B /* whatsapp_cloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CABE8AF2BD18D3000A63F3B /* whatsapp_cloneApp.swift */; };
 		7CABE8B42BD18D3200A63F3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CABE8B32BD18D3200A63F3B /* Assets.xcassets */; };
 		7CABE8B72BD18D3200A63F3B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CABE8B62BD18D3200A63F3B /* Preview Assets.xcassets */; };
@@ -58,6 +60,8 @@
 		7C5688262BDBF8A200ADA6A9 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		7C5688872BDF895200ADA6A9 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		7C5688892BDF897600ADA6A9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7C56888B2BDF8A4D00ADA6A9 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		7C56888D2BDF8DAD00ADA6A9 /* Firestore+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firestore+Extensions.swift"; sourceTree = "<group>"; };
 		7CABE8AC2BD18D3000A63F3B /* whatsapp-clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "whatsapp-clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CABE8AF2BD18D3000A63F3B /* whatsapp_cloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whatsapp_cloneApp.swift; sourceTree = "<group>"; };
 		7CABE8B32BD18D3200A63F3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 		7CABE8BE2BD18E4600A63F3B /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				7C56888B2BDF8A4D00ADA6A9 /* AuthService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -340,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				7CABE8F02BD8221400A63F3B /* Date+Extensions.swift */,
+				7C56888D2BDF8DAD00ADA6A9 /* Firestore+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -463,7 +469,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CABE8DB2BD5791200A63F3B /* CircularProfileImageView.swift in Sources */,
+				7C56888C2BDF8A4D00ADA6A9 /* AuthService.swift in Sources */,
 				7CABE9022BDA6DB200A63F3B /* SettingRow.swift in Sources */,
+				7C56888E2BDF8DAD00ADA6A9 /* Firestore+Extensions.swift in Sources */,
 				7CABE8EA2BD6484800A63F3B /* CustomBackButton.swift in Sources */,
 				7C5688252BDBF6CB00ADA6A9 /* RegistrationViewModel.swift in Sources */,
 				7C5688232BDBF68000ADA6A9 /* RegistrationView.swift in Sources */,
