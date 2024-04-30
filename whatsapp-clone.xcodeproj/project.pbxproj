@@ -29,6 +29,8 @@
 		7C74D05B2BE0D75D00E37DBE /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74D05A2BE0D75D00E37DBE /* ProfileViewModel.swift */; };
 		7C74D05D2BE0D95100E37DBE /* View+CircularProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74D05C2BE0D95100E37DBE /* View+CircularProfileImage.swift */; };
 		7C74D05F2BE0DBE500E37DBE /* MediaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74D05E2BE0DBE500E37DBE /* MediaService.swift */; };
+		7C74D0622BE10B0E00E37DBE /* NewMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74D0612BE10B0E00E37DBE /* NewMessageViewModel.swift */; };
+		7C74D0642BE10CDE00E37DBE /* ContactRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74D0632BE10CDE00E37DBE /* ContactRow.swift */; };
 		7CABE8B02BD18D3000A63F3B /* whatsapp_cloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CABE8AF2BD18D3000A63F3B /* whatsapp_cloneApp.swift */; };
 		7CABE8B42BD18D3200A63F3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CABE8B32BD18D3200A63F3B /* Assets.xcassets */; };
 		7CABE8B72BD18D3200A63F3B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CABE8B62BD18D3200A63F3B /* Preview Assets.xcassets */; };
@@ -73,6 +75,8 @@
 		7C74D05A2BE0D75D00E37DBE /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		7C74D05C2BE0D95100E37DBE /* View+CircularProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+CircularProfileImage.swift"; sourceTree = "<group>"; };
 		7C74D05E2BE0DBE500E37DBE /* MediaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaService.swift; sourceTree = "<group>"; };
+		7C74D0612BE10B0E00E37DBE /* NewMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageViewModel.swift; sourceTree = "<group>"; };
+		7C74D0632BE10CDE00E37DBE /* ContactRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRow.swift; sourceTree = "<group>"; };
 		7CABE8AC2BD18D3000A63F3B /* whatsapp-clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "whatsapp-clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CABE8AF2BD18D3000A63F3B /* whatsapp_cloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whatsapp_cloneApp.swift; sourceTree = "<group>"; };
 		7CABE8B32BD18D3200A63F3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -152,6 +156,14 @@
 			isa = PBXGroup;
 			children = (
 				7C74D05A2BE0D75D00E37DBE /* ProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7C74D0602BE10B0600E37DBE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7C74D0612BE10B0E00E37DBE /* NewMessageViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -288,6 +300,7 @@
 		7CABE8C62BD18E8D00A63F3B /* New Message */ = {
 			isa = PBXGroup;
 			children = (
+				7C74D0602BE10B0600E37DBE /* ViewModel */,
 				7CABE8E22BD5807C00A63F3B /* View */,
 			);
 			path = "New Message";
@@ -358,6 +371,7 @@
 			isa = PBXGroup;
 			children = (
 				7CABE8E32BD5808400A63F3B /* NewMessageView.swift */,
+				7C74D0632BE10CDE00E37DBE /* ContactRow.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -508,6 +522,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C2996FE2BDFD2E600EC1538 /* RootViewModel.swift in Sources */,
+				7C74D0622BE10B0E00E37DBE /* NewMessageViewModel.swift in Sources */,
 				7C56888C2BDF8A4D00ADA6A9 /* AuthService.swift in Sources */,
 				7C74D05F2BE0DBE500E37DBE /* MediaService.swift in Sources */,
 				7CABE9022BDA6DB200A63F3B /* SettingRow.swift in Sources */,
@@ -529,6 +544,7 @@
 				7CABE8F82BD8E83800A63F3B /* ProfileView.swift in Sources */,
 				7CABE8EE2BD6DFEF00A63F3B /* ChatBubble.swift in Sources */,
 				7C2997002BDFD44400EC1538 /* UserService.swift in Sources */,
+				7C74D0642BE10CDE00E37DBE /* ContactRow.swift in Sources */,
 				7CABE8B02BD18D3000A63F3B /* whatsapp_cloneApp.swift in Sources */,
 				7CABE8F52BD8245E00A63F3B /* MessageGroup.swift in Sources */,
 				7CABE8CF2BD192DE00A63F3B /* TabItem.swift in Sources */,

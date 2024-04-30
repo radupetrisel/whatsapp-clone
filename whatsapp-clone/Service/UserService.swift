@@ -33,4 +33,13 @@ final class UserService {
         let snapshot = try await Firestore.firestore().collection(Firestore.USERS).document(uid).getDocument()
         return try snapshot.data(as: User.self)
     }
+    
+    func fetchAll() async throws -> [User] {
+        try await Firestore.firestore()
+            .collection(Firestore.USERS)
+            .order(by: "fullName")
+            .getDocuments()
+            .documents
+            .map { try $0.data(as: User.self) }
+    }
 }
