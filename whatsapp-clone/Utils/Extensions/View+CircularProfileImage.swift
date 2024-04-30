@@ -1,8 +1,8 @@
 //
-//  CircularProfileImageView.swift
+//  View+Extensions.swift
 //  whatsapp-clone
 //
-//  Created by Radu Petrisel on 21.04.2024.
+//  Created by Radu Petrisel on 30.04.2024.
 //
 
 import SwiftUI

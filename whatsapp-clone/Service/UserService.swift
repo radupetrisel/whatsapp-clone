@@ -17,6 +17,12 @@ final class UserService {
         guard let uid = AuthService.shared.session?.uid else { fatalError() }
         
         let user = User(id: uid, fullName: fullName, email: email, phoneNumber: phoneNumber)
+        try await upload(user)
+    }
+    
+    func upload(_ user: User) async throws {
+        guard let _ = AuthService.shared.session?.uid else { fatalError() }
+        
         let data = try Firestore.Encoder().encode(user)
         try await Firestore.firestore().collection(Firestore.USERS).document(user.id).setData(data)
     }

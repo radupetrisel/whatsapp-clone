@@ -26,6 +26,9 @@
 		7C56888A2BDF897600ADA6A9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C5688892BDF897600ADA6A9 /* GoogleService-Info.plist */; };
 		7C56888C2BDF8A4D00ADA6A9 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C56888B2BDF8A4D00ADA6A9 /* AuthService.swift */; };
 		7C56888E2BDF8DAD00ADA6A9 /* Firestore+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C56888D2BDF8DAD00ADA6A9 /* Firestore+Extensions.swift */; };
+		7C74D05B2BE0D75D00E37DBE /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74D05A2BE0D75D00E37DBE /* ProfileViewModel.swift */; };
+		7C74D05D2BE0D95100E37DBE /* View+CircularProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74D05C2BE0D95100E37DBE /* View+CircularProfileImage.swift */; };
+		7C74D05F2BE0DBE500E37DBE /* MediaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C74D05E2BE0DBE500E37DBE /* MediaService.swift */; };
 		7CABE8B02BD18D3000A63F3B /* whatsapp_cloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CABE8AF2BD18D3000A63F3B /* whatsapp_cloneApp.swift */; };
 		7CABE8B42BD18D3200A63F3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CABE8B32BD18D3200A63F3B /* Assets.xcassets */; };
 		7CABE8B72BD18D3200A63F3B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CABE8B62BD18D3200A63F3B /* Preview Assets.xcassets */; };
@@ -33,7 +36,6 @@
 		7CABE8CF2BD192DE00A63F3B /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CABE8CE2BD192DE00A63F3B /* TabItem.swift */; };
 		7CABE8D12BD2AE2500A63F3B /* InboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CABE8D02BD2AE2500A63F3B /* InboxView.swift */; };
 		7CABE8D42BD2B32000A63F3B /* ChatHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CABE8D32BD2B32000A63F3B /* ChatHeaderView.swift */; };
-		7CABE8DB2BD5791200A63F3B /* CircularProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CABE8DA2BD5791200A63F3B /* CircularProfileImageView.swift */; };
 		7CABE8DF2BD57A4800A63F3B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CABE8DE2BD57A4800A63F3B /* User.swift */; };
 		7CABE8E42BD5808400A63F3B /* NewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CABE8E32BD5808400A63F3B /* NewMessageView.swift */; };
 		7CABE8E82BD645A700A63F3B /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CABE8E72BD645A700A63F3B /* ChatView.swift */; };
@@ -68,6 +70,9 @@
 		7C5688892BDF897600ADA6A9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7C56888B2BDF8A4D00ADA6A9 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		7C56888D2BDF8DAD00ADA6A9 /* Firestore+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firestore+Extensions.swift"; sourceTree = "<group>"; };
+		7C74D05A2BE0D75D00E37DBE /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		7C74D05C2BE0D95100E37DBE /* View+CircularProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+CircularProfileImage.swift"; sourceTree = "<group>"; };
+		7C74D05E2BE0DBE500E37DBE /* MediaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaService.swift; sourceTree = "<group>"; };
 		7CABE8AC2BD18D3000A63F3B /* whatsapp-clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "whatsapp-clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CABE8AF2BD18D3000A63F3B /* whatsapp_cloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whatsapp_cloneApp.swift; sourceTree = "<group>"; };
 		7CABE8B32BD18D3200A63F3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,7 +81,6 @@
 		7CABE8CE2BD192DE00A63F3B /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 		7CABE8D02BD2AE2500A63F3B /* InboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxView.swift; sourceTree = "<group>"; };
 		7CABE8D32BD2B32000A63F3B /* ChatHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHeaderView.swift; sourceTree = "<group>"; };
-		7CABE8DA2BD5791200A63F3B /* CircularProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProfileImageView.swift; sourceTree = "<group>"; };
 		7CABE8DE2BD57A4800A63F3B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7CABE8E32BD5808400A63F3B /* NewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageView.swift; sourceTree = "<group>"; };
 		7CABE8E72BD645A700A63F3B /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
@@ -144,6 +148,14 @@
 			path = Styles;
 			sourceTree = "<group>";
 		};
+		7C74D0592BE0D75500E37DBE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7C74D05A2BE0D75D00E37DBE /* ProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		7CABE8A32BD18D3000A63F3B = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +210,7 @@
 			children = (
 				7C56888B2BDF8A4D00ADA6A9 /* AuthService.swift */,
 				7C2996FF2BDFD44400EC1538 /* UserService.swift */,
+				7C74D05E2BE0DBE500E37DBE /* MediaService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -266,6 +279,7 @@
 		7CABE8C52BD18E8B00A63F3B /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				7C74D0592BE0D75500E37DBE /* ViewModel */,
 				7CABE8F62BD8E83000A63F3B /* View */,
 			);
 			path = Profile;
@@ -333,7 +347,6 @@
 		7CABE8D92BD5790A00A63F3B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7CABE8DA2BD5791200A63F3B /* CircularProfileImageView.swift */,
 				7CABE8E92BD6484800A63F3B /* CustomBackButton.swift */,
 				7C56881B2BDBC47100ADA6A9 /* CustomTextField.swift */,
 				7C5688262BDBF8A200ADA6A9 /* LogoView.swift */,
@@ -371,6 +384,7 @@
 			children = (
 				7CABE8F02BD8221400A63F3B /* Date+Extensions.swift */,
 				7C56888D2BDF8DAD00ADA6A9 /* Firestore+Extensions.swift */,
+				7C74D05C2BE0D95100E37DBE /* View+CircularProfileImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -494,8 +508,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C2996FE2BDFD2E600EC1538 /* RootViewModel.swift in Sources */,
-				7CABE8DB2BD5791200A63F3B /* CircularProfileImageView.swift in Sources */,
 				7C56888C2BDF8A4D00ADA6A9 /* AuthService.swift in Sources */,
+				7C74D05F2BE0DBE500E37DBE /* MediaService.swift in Sources */,
 				7CABE9022BDA6DB200A63F3B /* SettingRow.swift in Sources */,
 				7C56888E2BDF8DAD00ADA6A9 /* Firestore+Extensions.swift in Sources */,
 				7CABE8EA2BD6484800A63F3B /* CustomBackButton.swift in Sources */,
@@ -522,7 +536,9 @@
 				7CABE8CD2BD1911100A63F3B /* MainTabView.swift in Sources */,
 				7C56881F2BDBF5F500ADA6A9 /* FullWidthButtonStyle.swift in Sources */,
 				7C5688212BDBF61700ADA6A9 /* AnyButtonStyle.swift in Sources */,
+				7C74D05D2BE0D95100E37DBE /* View+CircularProfileImage.swift in Sources */,
 				7C5688272BDBF8A200ADA6A9 /* LogoView.swift in Sources */,
+				7C74D05B2BE0D75D00E37DBE /* ProfileViewModel.swift in Sources */,
 				7C56881A2BDB8F5000ADA6A9 /* LoginViewModel.swift in Sources */,
 				7CABE9002BDA6D8900A63F3B /* SettingsViewModel.swift in Sources */,
 				7CABE8E42BD5808400A63F3B /* NewMessageView.swift in Sources */,
