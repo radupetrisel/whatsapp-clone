@@ -16,6 +16,7 @@ struct SettingViewModel: Identifiable {
     var action: () -> Void = { }
 }
 
+@Observable
 final class SettingsViewModel {
     var settings: [SettingViewModel] = [
         SettingViewModel(title: "Account", description: "Security notifications, change number", imageName: "key.fill"),
@@ -29,6 +30,18 @@ final class SettingsViewModel {
         SettingViewModel(title: "Invite a Friend", imageName: "person.2.fill"),
         SettingViewModel(title: "Logout", description: nil, imageName: "rectangle.portrait.and.arrow.right.fill") { Task { try await AuthService.shared.logout() } }
     ]
+    
+    var user: User = .preview
+    
+    init() {
+        fetchCurrentUser()
+    }
+    
+    func fetchCurrentUser() {
+        Task {
+            user = try await UserService.shared.fetch()
+        }
+    }
 }
 
 extension SettingViewModel {

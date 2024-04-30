@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct SettingsHeader: View {
+    let user: User
+    
     var body: some View {
         HStack(spacing: 20) {
-            Image(.elizabeth)
-                .resizable()
-                .circularProfile(.extraLarge)
+            AsyncImage(url: user.profileImageURL) { image in
+                image.resizable()
+            } placeholder: {
+                Image(.logo).resizable()
+            }
+            .circularProfile(.extraLarge)
             
             VStack(alignment: .leading, spacing: 12) {
-                Text("Elizabeth Olsen")
+                Text(user.fullName)
                     .font(.headline)
                     .bold()
                 
@@ -31,5 +36,5 @@ struct SettingsHeader: View {
 }
 
 #Preview {
-    SettingsHeader()
+    SettingsHeader(user: .preview)
 }

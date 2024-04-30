@@ -15,7 +15,7 @@ struct SettingsView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
-                SettingsHeader()
+                SettingsHeader(user: viewModel.user)
                 
                 Divider()
                 
@@ -25,6 +25,7 @@ struct SettingsView: View {
             }
             .searchable(text: $searchString)
         }
+        .onAppear { viewModel.fetchCurrentUser() }
         .navigationTitle("Settings")
     }
 }
