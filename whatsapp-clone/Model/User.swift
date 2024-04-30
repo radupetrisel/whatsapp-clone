@@ -18,5 +18,5 @@ struct User: Codable, Hashable, Identifiable {
 }
 
 extension User {
-    static let preview = User(fullName: "Wanda Maximoff", email: "wanda.maximoff@gmail.com", phoneNumber: "+11111", profileImageURL: Bundle.main.url(forResource: "elizabeth", withExtension: "jpeg"))
+    static let preview = User(fullName: "Wanda Maximoff", email: "wanda.maximoff@gmail.com", phoneNumber: "+11111")
 }

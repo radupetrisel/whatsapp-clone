@@ -14,13 +14,15 @@ struct ProfileView: View {
     @State private var isPhotoPickerShown = false
     @State private var selectedPhotoPickerItem: PhotosPickerItem?
     
+    private var user: User { viewModel.user }
+    
     var body: some View {
         VStack(spacing: 20) {
             Button {
                 isPhotoPickerShown.toggle()
             } label: {
                 ZStack(alignment: .bottomTrailing) {
-                    AsyncImage(url: viewModel.profileImageURL) { image in
+                    AsyncImage(url: user.profileImageURL) { image in
                         image.resizable()
                     } placeholder: {
                         Image(.logo).resizable()
@@ -36,11 +38,11 @@ struct ProfileView: View {
             }
             .buttonStyle(.plain)
             
-            ProfileViewRow(leftImageName: "person.fill", title: "Name", description: "Elizabeth Olsen", footnote: "This is not your username or pin. This name will be visible to your WhatsApp contacts.")
+            ProfileViewRow(leftImageName: "person.fill", title: "Name", description: user.fullName, footnote: "This is not your username or pin. This name will be visible to your WhatsApp contacts.")
             
             ProfileViewRow(leftImageName: "exclamationmark.circle", title: "About", description: "Hey there! I am using WhatsApp")
             
-            ProfileViewRow(leftImageName: "phone.fill", title: "Phone", description: "+88888", hasRightImage: false)
+            ProfileViewRow(leftImageName: "phone.fill", title: "Phone", description: user.phoneNumber, hasRightImage: false)
             
             Spacer()
         }

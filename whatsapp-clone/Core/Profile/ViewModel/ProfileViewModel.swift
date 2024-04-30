@@ -11,11 +11,11 @@ import Foundation
 
 @Observable
 final class ProfileViewModel {
-    var profileImageURL: URL?
+    var user: User = .preview
     
     init() {
         Task {
-            profileImageURL = try await UserService.shared.fetch().profileImageURL
+            user = try await UserService.shared.fetch()
         }
     }
     
@@ -24,11 +24,9 @@ final class ProfileViewModel {
         
         let profileImageUrl = try await MediaService.shared.uploadProfilePicture(using: data)
         
-        var user = try await UserService.shared.fetch()
+        user = try await UserService.shared.fetch()
         user.profileImageURL = profileImageUrl
         
         try await UserService.shared.upload(user)
-        
-        self.profileImageURL = profileImageUrl
     }
 }
