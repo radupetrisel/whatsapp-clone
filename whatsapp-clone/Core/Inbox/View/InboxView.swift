@@ -9,20 +9,22 @@ import SwiftUI
 
 struct InboxView: View {
     @State private var searchString = ""
+    @State private var showNewMessageView = false
+    @State private var selectedUser: User?
     
     var body: some View {
         NavigationStack {
             ZStack(alignment: .bottomTrailing) {
                 List {
-                    ChatHeaderView()
+                    ChatHeaderView(user: .preview)
                     
-                    ChatHeaderView()
+                    ChatHeaderView(user: .preview)
                 }
                 .listStyle(.plain)
                 .searchable(text: $searchString)
                 
-                NavigationLink {
-                    NewMessageView()
+                Button {
+                    showNewMessageView.toggle()
                 } label: {
                     Image(systemName: "plus.bubble.fill")
                 }
@@ -34,6 +36,12 @@ struct InboxView: View {
             }
             .toolbar { toolbar }
             .navigationTitle("Chats")
+            .fullScreenCover(isPresented: $showNewMessageView) {
+                NewMessageView(selectedUser: $selectedUser)
+            }
+            .navigationDestination(item: $selectedUser) { user in
+                ChatView(user: user)
+            }
         }
     }
     

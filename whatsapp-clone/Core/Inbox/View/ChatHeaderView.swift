@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct ChatHeaderView: View {
+    let user: User
+    
     var body: some View {
         NavigationLink {
-            ChatView()
+            ChatView(user: user)
         } label: {
             HStack(alignment: .top, spacing: 12) {
                 Image(.elizabeth)
@@ -51,7 +53,7 @@ struct ChatHeaderView: View {
 
 #Preview {
     List {
-        ChatHeaderView()
+        ChatHeaderView(user: .preview)
     }
     .listStyle(.plain)
 }

@@ -8,53 +8,63 @@
 import SwiftUI
 
 struct NewMessageView: View {
+    @Environment(\.dismiss) var dismiss
+    
     @State private var viewModel = NewMessageViewModel()
+    @Binding var selectedUser: User?
     
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading) {
-                VStack(spacing: 24) {
-                    ContactRow(title: "New group") {
-                        Image(systemName: "person.2.circle.fill")
-                            .resizable()
-                            .foregroundStyle(.secondary)
+        NavigationStack {
+            ScrollView {
+                VStack(alignment: .leading) {
+                    VStack(spacing: 24) {
+                        ContactRow(title: "New group") {
+                            Image(systemName: "person.2.circle.fill")
+                                .resizable()
+                                .foregroundStyle(.secondary)
+                        }
+                        
+                        ContactRow(title: "New contact") {
+                            Image(systemName: "person.circle.fill")
+                                .resizable()
+                                .foregroundStyle(.secondary)
+                        }
+                        
+                        ContactRow(title: "New community") {
+                            Image(systemName: "shared.with.you.circle.fill")
+                                .resizable()
+                                .foregroundStyle(.secondary)
+                        }
                     }
                     
-                    ContactRow(title: "New contact") {
-                        Image(systemName: "person.circle.fill")
-                            .resizable()
-                            .foregroundStyle(.secondary)
-                    }
+                    Text("Contacts on WhatsApp")
+                        .foregroundStyle(.secondary)
+                        .font(.footnote)
+                        .fontWeight(.semibold)
+                        .padding()
                     
-                    ContactRow(title: "New community") {
-                        Image(systemName: "shared.with.you.circle.fill")
-                            .resizable()
-                            .foregroundStyle(.secondary)
-                    }
-                }
-                
-                Text("Contacts on WhatsApp")
-                    .foregroundStyle(.secondary)
-                    .font(.footnote)
-                    .fontWeight(.semibold)
-                    .padding()
-                
-                LazyVStack(spacing: 15) {
-                    ForEach(viewModel.users) { user in
-                        ContactRow(title: user.fullName, detail: "Hey there! I am using WhatsApp") {
-                            AsyncImage(url: user.profileImageURL) { image in
-                                image.resizable()
-                            } placeholder: {
-                                Image(.logo).resizable()
+                    LazyVStack(spacing: 15) {
+                        ForEach(viewModel.users) { user in
+                            Button {
+                                selectedUser = user
+                                dismiss()
+                            } label: {
+                                ContactRow(title: user.fullName, detail: "Hey there! I am using WhatsApp") {
+                                    AsyncImage(url: user.profileImageURL) { image in
+                                        image.resizable()
+                                    } placeholder: {
+                                        Image(.logo).resizable()
+                                    }
+                                }
                             }
-
+                            .buttonStyle(.plain)
                         }
                     }
                 }
+                .padding(.top)
             }
-            .padding(.top)
+            .toolbar { toolbar }
         }
-        .toolbar { toolbar }
     }
     
     @ToolbarContentBuilder
@@ -85,6 +95,6 @@ struct NewMessageView: View {
 
 #Preview {
     NavigationStack {
-        NewMessageView()
+        NewMessageView(selectedUser: .constant(.preview))
     }
 }

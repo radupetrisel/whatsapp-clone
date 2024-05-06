@@ -9,6 +9,11 @@ import SwiftUI
 
 struct ChatView: View {
     @State private var message = ""
+    @State private var user: User
+    
+    init(user: User) {
+        self.user = user
+    }
     
     var body: some View {
         ScrollView {
@@ -38,7 +43,6 @@ struct ChatView: View {
         .toolbarBackground(.white, for: .navigationBar)
         .toolbar(.hidden, for: .tabBar)
         .toolbar { toolbar }
-        .navigationBarBackButtonHidden()
     }
     
     @ToolbarContentBuilder
@@ -46,11 +50,14 @@ struct ChatView: View {
         ToolbarItemGroup(placement: .topBarLeading) {
             CustomBackButton()
             
-            Image(.elizabeth)
-                .resizable()
-                .circularProfile(.extraSmall)
+            AsyncImage(url: user.profileImageURL) { image in
+                image.resizable()
+            } placeholder: {
+                Image(.logo).resizable()
+            }
+            .circularProfile(.extraSmall)
             
-            Text("Elizabeth Olsen")
+            Text(user.fullName)
                 .font(.footnote)
                 .fontWeight(.semibold)
         }
@@ -136,6 +143,6 @@ struct ChatView: View {
 
 #Preview {
     NavigationStack {
-        ChatView()
+        ChatView(user: .preview)
     }
 }
