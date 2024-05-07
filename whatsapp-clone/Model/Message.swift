@@ -5,28 +5,43 @@
 //  Created by Radu Petrisel on 23.04.2024.
 //
 
+import Firebase
+import FirebaseFirestoreSwift
 import Foundation
 
 struct Message: Codable, Hashable, Identifiable {
-    var id: String = UUID().uuidString
+    
+    @DocumentID
+    var id: String?
     
     let fromId: String
     let toId: String
     
     let content: String
-//    let timeStamp: TimeStamp
+    let timeStamp: Timestamp
     
-    let isImage: Bool
-    let isAudio: Bool
-    let isVideo: Bool
+    let kind: Kind
     
     let user: User?
     
+    var chatPartnerId: String {
+        isFromCurrentUser ? toId : fromId
+    }
+    
     var isFromCurrentUser: Bool {
-        user != .preview
+        fromId == AuthService.shared.session?.uid
     }
 }
 
 extension Message {
-    static var preview: Message { Message(fromId: "", toId: "", content: "Hello", isImage: false, isAudio: false, isVideo: false, user: Bool.random() ? .preview : nil) }
+    static var preview: Message { Message(fromId: "", toId: "", content: "Hello", timeStamp: .init(date: .now), kind: .text, user: Bool.random() ? .preview : nil) }
+}
+
+extension Message {
+    enum Kind: Codable {
+        case text
+        case audio
+        case image
+        case video
+    }
 }

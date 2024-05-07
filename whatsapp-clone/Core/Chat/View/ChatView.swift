@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ChatView: View {
-    @State private var message = ""
-    @State private var user: User
+    @State private var viewModel: ChatViewModel
     
-    init(user: User) {
-        self.user = user
+    init(recipient: User) {
+        viewModel = ChatViewModel(recipient: recipient)
     }
+    
+    var recipient: User { viewModel.recipient }
     
     var body: some View {
         ScrollView {
@@ -50,14 +51,14 @@ struct ChatView: View {
         ToolbarItemGroup(placement: .topBarLeading) {
             CustomBackButton()
             
-            AsyncImage(url: user.profileImageURL) { image in
+            AsyncImage(url: recipient.profileImageURL) { image in
                 image.resizable()
             } placeholder: {
                 Image(.logo).resizable()
             }
             .circularProfile(.extraSmall)
             
-            Text(user.fullName)
+            Text(recipient.fullName)
                 .font(.footnote)
                 .fontWeight(.semibold)
         }
@@ -105,15 +106,15 @@ struct ChatView: View {
                     .font(.title2)
                     .labelStyle(.iconOnly)
                     
-                    TextField("Message", text: $message, prompt: Text(""))
+                    TextField("Message", text: $viewModel.message, prompt: Text(""))
                         .padding(.vertical, 4)
                         .padding(.horizontal, 10)
                         .background(.white)
                         .clipShape(.capsule)
-                        .animation(.default.delay(0.25), value: message.isEmpty)
+                        .animation(.default.delay(0.25), value: viewModel.message.isEmpty)
                     
                     ZStack {
-                        if message.isEmpty {
+                        if viewModel.message.isEmpty {
                             HStack {
                                 Button("Add media", systemImage: "camera") {
                                     
@@ -129,12 +130,16 @@ struct ChatView: View {
                             }
                             
                         } else {
-                            Button("Send", systemImage: "play.fill") { }
-                                .labelStyle(.iconOnly)
-                                .font(.title2)
+                            Button("Send", systemImage: "play.fill") {
+                                Task {
+                                    try await viewModel.sendMessage(messageKind: .text)
+                                }
+                            }
+                            .labelStyle(.iconOnly)
+                            .font(.title2)
                         }
                     }
-                    .animation(.linear(duration: 0.2), value: message.isEmpty)
+                    .animation(.linear(duration: 0.2), value: viewModel.message.isEmpty)
                 }
                 .padding()
             }
@@ -143,6 +148,6 @@ struct ChatView: View {
 
 #Preview {
     NavigationStack {
-        ChatView(user: .preview)
+        ChatView(recipient: .preview)
     }
 }

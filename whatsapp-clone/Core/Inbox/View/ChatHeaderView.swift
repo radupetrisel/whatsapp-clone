@@ -12,7 +12,7 @@ struct ChatHeaderView: View {
     
     var body: some View {
         NavigationLink {
-            ChatView(user: user)
+            ChatView(recipient: user)
         } label: {
             HStack(alignment: .top, spacing: 12) {
                 Image(.elizabeth)

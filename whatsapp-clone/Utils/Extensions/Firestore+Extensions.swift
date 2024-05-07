@@ -10,4 +10,5 @@ import FirebaseFirestore
 
 extension Firestore {
     static let USERS = "users"
+    static let MESSAGES = "messages"
 }

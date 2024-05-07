@@ -40,7 +40,7 @@ struct InboxView: View {
                 NewMessageView(selectedUser: $selectedUser)
             }
             .navigationDestination(item: $selectedUser) { user in
-                ChatView(user: user)
+                ChatView(recipient: user)
             }
         }
     }

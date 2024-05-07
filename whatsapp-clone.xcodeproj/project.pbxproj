@@ -10,6 +10,8 @@
 		7C2996FC2BDFD2CD00EC1538 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2996FB2BDFD2CD00EC1538 /* RootView.swift */; };
 		7C2996FE2BDFD2E600EC1538 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2996FD2BDFD2E600EC1538 /* RootViewModel.swift */; };
 		7C2997002BDFD44400EC1538 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2996FF2BDFD44400EC1538 /* UserService.swift */; };
+		7C3401C32BEA24C400A793CE /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3401C22BEA24C400A793CE /* ChatService.swift */; };
+		7C3401EB2BEA532900A793CE /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3401EA2BEA532900A793CE /* ChatViewModel.swift */; };
 		7C5688172BDB8EDF00ADA6A9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5688162BDB8EDF00ADA6A9 /* LoginView.swift */; };
 		7C56881A2BDB8F5000ADA6A9 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5688192BDB8F5000ADA6A9 /* LoginViewModel.swift */; };
 		7C56881C2BDBC47100ADA6A9 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C56881B2BDBC47100ADA6A9 /* CustomTextField.swift */; };
@@ -60,6 +62,8 @@
 		7C2996FB2BDFD2CD00EC1538 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		7C2996FD2BDFD2E600EC1538 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		7C2996FF2BDFD44400EC1538 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		7C3401C22BEA24C400A793CE /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
+		7C3401EA2BEA532900A793CE /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		7C5688162BDB8EDF00ADA6A9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7C5688192BDB8F5000ADA6A9 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		7C56881B2BDBC47100ADA6A9 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
@@ -223,6 +227,7 @@
 				7C56888B2BDF8A4D00ADA6A9 /* AuthService.swift */,
 				7C2996FF2BDFD44400EC1538 /* UserService.swift */,
 				7C74D05E2BE0DBE500E37DBE /* MediaService.swift */,
+				7C3401C22BEA24C400A793CE /* ChatService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -389,6 +394,7 @@
 		7CABE8E62BD6459800A63F3B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				7C3401EA2BEA532900A793CE /* ChatViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -526,6 +532,7 @@
 				7C56888C2BDF8A4D00ADA6A9 /* AuthService.swift in Sources */,
 				7C74D05F2BE0DBE500E37DBE /* MediaService.swift in Sources */,
 				7CABE9022BDA6DB200A63F3B /* SettingRow.swift in Sources */,
+				7C3401C32BEA24C400A793CE /* ChatService.swift in Sources */,
 				7C56888E2BDF8DAD00ADA6A9 /* Firestore+Extensions.swift in Sources */,
 				7CABE8EA2BD6484800A63F3B /* CustomBackButton.swift in Sources */,
 				7C5688252BDBF6CB00ADA6A9 /* RegistrationViewModel.swift in Sources */,
@@ -559,6 +566,7 @@
 				7CABE9002BDA6D8900A63F3B /* SettingsViewModel.swift in Sources */,
 				7CABE8E42BD5808400A63F3B /* NewMessageView.swift in Sources */,
 				7CABE8F32BD823AC00A63F3B /* Message.swift in Sources */,
+				7C3401EB2BEA532900A793CE /* ChatViewModel.swift in Sources */,
 				7C2996FC2BDFD2CD00EC1538 /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
