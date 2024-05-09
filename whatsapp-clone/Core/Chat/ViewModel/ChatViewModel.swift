@@ -6,6 +6,7 @@
 //
 
 import Combine
+import Firebase
 import Foundation
 
 @Observable
@@ -32,8 +33,25 @@ final class ChatViewModel {
     func observeMessages() {
         ChatService.shared.observe(to: recipient)
             .sink { [unowned self] messages in
-                self.messageGroups.append(MessageGroup(messages: messages, date: .now))
+                let newGroups = self.groupMessagesByDate(messages)
+                self.merge(messageGroups: newGroups, into: &self.messageGroups)
             }
             .store(in: &cancellable)
+    }
+    
+    private func groupMessagesByDate(_ messages: [Message]) -> [MessageGroup] {
+        Dictionary(grouping: messages, by: { Calendar.current.startOfDay(for: $0.timeStamp.dateValue()) })
+            .map { key, value in MessageGroup(messages: value, date: key) }
+            .sorted { $0.date < $1.date }
+    }
+    
+    private func merge(messageGroups: [MessageGroup], into destination: inout [MessageGroup]) {
+        for messageGroup in messageGroups {
+            if let index = destination.firstIndex(where: { $0.date == messageGroup.date }) {
+                destination[index].messages.append(contentsOf: messageGroup.messages)
+            } else {
+                destination.append(messageGroup)
+            }
+        }
     }
 }
