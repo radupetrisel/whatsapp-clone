@@ -5,6 +5,7 @@
 //  Created by Radu Petrisel on 07.05.2024.
 //
 
+import Combine
 import Firebase
 import Foundation
 
@@ -38,5 +39,34 @@ final class ChatService {
         
         try await senderRef.setData(messageData)
         try await recipientRef.document(documentId).setData(messageData)
+    }
+    
+    func observe(to recipient: User) -> some Publisher<[Message], Never> {
+        guard let senderId = AuthService.shared.session?.uid else { return PassthroughSubject() }
+        let query = Firestore.firestore()
+            .collection(Firestore.MESSAGES)
+            .document(senderId)
+            .collection(recipient.id)
+            .order(by: "timeStamp", descending: false)
+        
+        let publisher = PassthroughSubject<[Message], Never>()
+        
+        query.addSnapshotListener { snapshot, _ in
+            guard let changes = snapshot?.documentChanges.filter({ change in change.type == .added }) else { return }
+            
+            let messages = changes.compactMap {
+                var message = try? $0.document.data(as: Message.self)
+                
+                if message?.isFromCurrentUser == false {
+                    message?.user = recipient
+                }
+                
+                return message
+            }
+            
+            publisher.send(messages)
+        }
+        
+        return publisher
     }
 }

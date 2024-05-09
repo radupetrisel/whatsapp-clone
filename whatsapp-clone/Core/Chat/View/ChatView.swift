@@ -19,7 +19,7 @@ struct ChatView: View {
     var body: some View {
         ScrollView {
             VStack {
-                ForEach([MessageGroup.preview]) { group in
+                ForEach(viewModel.messageGroups) { group in
                     Section {
                         ForEach(group.messages) { message in
                             ChatMessageCell(message: message)

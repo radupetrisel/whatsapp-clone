@@ -22,7 +22,7 @@ struct Message: Codable, Hashable, Identifiable {
     
     let kind: Kind
     
-    let user: User?
+    var user: User?
     
     var chatPartnerId: String {
         isFromCurrentUser ? toId : fromId
