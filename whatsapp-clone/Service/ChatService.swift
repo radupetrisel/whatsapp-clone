@@ -27,10 +27,22 @@ final class ChatService {
             .collection(recipientId)
             .document()
         
+        let latestSenderRef = Firestore.firestore()
+            .collection(Firestore.MESSAGES)
+            .document(senderId)
+            .collection(Firestore.LATEST_MESSAGES)
+            .document(recipientId)
+        
         let recipientRef = Firestore.firestore()
             .collection(Firestore.MESSAGES)
             .document(recipientId)
             .collection(senderId)
+        
+        let latestRecipientRef = Firestore.firestore()
+            .collection(Firestore.MESSAGES)
+            .document(recipientId)
+            .collection(Firestore.LATEST_MESSAGES)
+            .document(senderId)
         
         let documentId = senderRef.documentID
         
@@ -39,6 +51,9 @@ final class ChatService {
         
         try await senderRef.setData(messageData)
         try await recipientRef.document(documentId).setData(messageData)
+        
+        try await latestSenderRef.setData(messageData)
+        try await latestRecipientRef.setData(messageData)
     }
     
     func observe(to recipient: User) -> some Publisher<[Message], Never> {

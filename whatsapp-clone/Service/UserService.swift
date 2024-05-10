@@ -30,7 +30,12 @@ final class UserService {
     func fetch() async throws -> User {
         guard let uid = AuthService.shared.session?.uid else { fatalError() }
         
-        let snapshot = try await Firestore.firestore().collection(Firestore.USERS).document(uid).getDocument()
+        return try await fetch(byId: uid)
+    }
+    
+    func fetch(byId id: String) async throws -> User {
+        let snapshot = try await Firestore.firestore().collection(Firestore.USERS).document(id).getDocument()
+        
         return try snapshot.data(as: User.self)
     }
     

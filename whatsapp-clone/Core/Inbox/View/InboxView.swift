@@ -11,14 +11,13 @@ struct InboxView: View {
     @State private var searchString = ""
     @State private var showNewMessageView = false
     @State private var selectedUser: User?
+    @State private var viewModel = InboxViewModel()
     
     var body: some View {
         NavigationStack {
             ZStack(alignment: .bottomTrailing) {
                 List {
-                    ChatHeaderView(user: .preview)
-                    
-                    ChatHeaderView(user: .preview)
+                    ForEach(viewModel.messages, content: ChatHeaderView.init(viewModel:))
                 }
                 .listStyle(.plain)
                 .searchable(text: $searchString)

@@ -8,22 +8,29 @@
 import SwiftUI
 
 struct ChatHeaderView: View {
-    let user: User
+    @State private var viewModel: ChatHeaderViewModel
+    
+    init(viewModel: ChatHeaderViewModel) {
+        self.viewModel = viewModel
+    }
     
     var body: some View {
         NavigationLink {
-            ChatView(recipient: user)
+            ChatView(recipient: viewModel.receiver)
         } label: {
             HStack(alignment: .top, spacing: 12) {
-                Image(.elizabeth)
-                    .resizable()
-                    .circularProfile(.medium)
+                AsyncImage(url: viewModel.receiver.profileImageURL) { image in
+                    image.resizable()
+                } placeholder: {
+                    Image(.logo).resizable()
+                }
+                .circularProfile(.medium)
                 
                 VStack(alignment: .leading) {
-                    Text("Elizabeth Olsen")
+                    Text(viewModel.receiver.fullName)
                         .bold()
                     
-                    Text("Hello")
+                    Text(viewModel.content)
                         .lineLimit(2)
                         .foregroundStyle(.secondary)
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -35,7 +42,7 @@ struct ChatHeaderView: View {
                 
                 VStack(alignment: .leading) {
                     HStack {
-                        Text("Yesterday")
+                        Text(viewModel.date.chatHeader)
                         
                         Image(systemName: "chevron.right")
                             .bold()
@@ -50,10 +57,9 @@ struct ChatHeaderView: View {
     }
 }
 
-
 #Preview {
     List {
-        ChatHeaderView(user: .preview)
+        ChatHeaderView(viewModel: .preview)
     }
     .listStyle(.plain)
 }
