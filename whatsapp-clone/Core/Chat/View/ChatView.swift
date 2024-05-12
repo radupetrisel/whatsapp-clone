@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ChatView: View {
+    private static let bottomID = "bottom"
+    
     @State private var viewModel: ChatViewModel
     
     init(recipient: User) {
@@ -18,20 +20,28 @@ struct ChatView: View {
     
     var body: some View {
         ScrollView {
-            VStack {
-                ForEach(viewModel.messageGroups) { group in
-                    Section {
-                        ForEach(group.messages) { message in
-                            ChatMessageCell(message: message)
+            ScrollViewReader { proxy in
+                VStack {
+                    ForEach(viewModel.messageGroups) { group in
+                        Section {
+                            ForEach(group.messages, content: ChatMessageCell.init(message:))
+                        } header: {
+                            Capsule()
+                                .fill(.windowBackground)
+                                .frame(width: 120, height: 44)
+                                .overlay {
+                                    Text(group.date.chatHeader)
+                                }
+                                .padding(.top, 10)
                         }
-                    } header: {
-                        Capsule()
-                            .fill(.windowBackground)
-                            .frame(width: 120, height: 44)
-                            .overlay {
-                                Text(group.date.chatHeader)
-                            }
-                            .padding(.top, 10)
+                    }
+                    
+                    HStack { }
+                        .id(Self.bottomID)
+                }
+                .onReceive($viewModel.messageGroups.publisher) { _ in
+                    withAnimation(.easeInOut(duration: 0.5)) {
+                        proxy.scrollTo(Self.bottomID, anchor: .bottom)
                     }
                 }
             }
